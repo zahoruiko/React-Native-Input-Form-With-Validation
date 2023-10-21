@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 type TFormButtonProps = {
   isDisabled: boolean;
@@ -6,9 +6,13 @@ type TFormButtonProps = {
   buttonText: string;
 };
 
-const  FormButton: React.FC<TFormButtonProps> = ({ isDisabled, onPress, buttonText }) => {
+const FormButton: React.FC<TFormButtonProps> = ({ isDisabled, onPress, buttonText }) => {
   return (
-    <TouchableOpacity style={[styles.button, { opacity: !isDisabled ? 1 : 0.5 }]} disabled={isDisabled} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.button, { opacity: !isDisabled ? 1 : 0.5 }]}
+      disabled={isDisabled}
+      onPress={onPress}
+    >
       <Text style={styles.buttonText}>{buttonText}</Text>
     </TouchableOpacity>
   );
@@ -29,5 +33,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 16
-  },
+  }
 });
